@@ -1,0 +1,76 @@
+<nav
+  class="side-bar bg-gray-900 w- h-491 p-6 rounded-lg border border-gray-600 shadow-lg"
+>
+  <ul class="space-y-4">
+    <li
+      routerLinkActive="bg-gray-600 text-gray-400"
+      [routerLinkActiveOptions]="{ exact: true }"
+      class="bg-gray-800 hover:bg-gray-600 text-gray-400 rounded-lg p-4 shadow-md transition duration-300"
+    >
+      <a
+        routerLink="/about"
+        class="flex flex-col items-center justify-center text-center space-y-2 text-gray-400 hover:text-gray-900 w-full h-full"
+        routerLinkActive="text-gray-900"
+      >
+        <i class="fas fa-user text-2xl"></i>
+        <span>About</span>
+      </a>
+    </li>
+    <li
+      routerLinkActive="bg-gray-600 text-gray-400"
+      [routerLinkActiveOptions]="{ exact: true }"
+      class="bg-gray-800 hover:bg-gray-600 text-gray-400 rounded-lg p-4 shadow-md transition duration-300"
+    >
+      <a
+        routerLink="/experience"
+        class="flex flex-col items-center justify-center text-center space-y-2 text-gray-400 hover:text-gray-900 w-full h-full"
+        routerLinkActive="text-gray-900"
+      >
+        <i class="fas fa-briefcase text-2xl"></i>
+        <span>Experience</span>
+      </a>
+    </li>
+    <li
+      routerLinkActive="bg-gray-600 text-gray-400"
+      [routerLinkActiveOptions]="{ exact: true }"
+      class="bg-gray-800 hover:bg-gray-600 text-gray-400 rounded-lg p-4 shadow-md transition duration-300"
+    >
+      <a
+        routerLink="/projects"
+        class="flex flex-col items-center justify-center text-center space-y-2 text-gray-400 hover:text-gray-900 w-full h-full"
+        routerLinkActive="text-gray-900"
+      >
+        <i class="fas fa-code text-2xl"></i>
+        <span>Projects</span>
+      </a>
+    </li>
+    <li
+      routerLinkActive="bg-gray-600 text-gray-400"
+      [routerLinkActiveOptions]="{ exact: true }"
+      class="bg-gray-800 hover:bg-gray-600 text-gray-400 rounded-lg p-4 shadow-md transition duration-300"
+    >
+      <a
+        routerLink="/skills"
+        class="flex flex-col items-center justify-center text-center space-y-2 text-gray-400 hover:text-gray-900 w-full h-full"
+        routerLinkActive="text-gray-900"
+      >
+        <i class="fas fa-cogs text-2xl"></i>
+        <span>Skills</span>
+      </a>
+    </li>
+    <li
+      routerLinkActive="bg-gray-600 text-gray-400"
+      [routerLinkActiveOptions]="{ exact: true }"
+      class="bg-gray-800 hover:bg-gray-600 text-gray-400 rounded-lg p-4 shadow-md transition duration-300"
+    >
+      <a
+        routerLink="/contact"
+        class="flex flex-col items-center justify-center text-center space-y-2 text-gray-400 hover:text-gray-900 w-full h-full"
+        routerLinkActive="text-gray-900"
+      >
+        <i class="fas fa-envelope text-2xl"></i>
+        <span>Contact</span>
+      </a>
+    </li>
+  </ul>
+</nav>
