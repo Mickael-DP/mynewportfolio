@@ -2,7 +2,7 @@
   class="experience-education-section p-2 rounded-lg shadow-lg text-white-800"
 >
   <div class="education-section">
-    <h1 class="text-3xl font-bold mb-6 text-white-900">Education</h1>
+    <h1 class="text-3xl font-sigmar font-bold mb-6 text-white-900 border-b border-gray-700 pb-2">MES DIPLOMES & FORMATIONS</h1>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <div
@@ -15,14 +15,14 @@
         <h3 class="text-md font-medium text-white-600 mb-4">
           {{ education.institution }} | {{ education.year }}
         </h3>
-        <p class="text-gray-400">{{ education.details }}</p>
+        <p class="text-gray-400">{{ education.detail }}</p>
       </div>
     </div>
   </div>
 
-  <div class="experience-section my-8">
-    <h1 class="text-3xl font-bold mb-6 text-white-900">
-     Experience
+  <div class="experience-section mt-6">
+    <h1 class="text-3xl font-sigmar font-bold mb-6 text-white-900 border-b border-gray-700 pb-2">
+     Mes Experiences Professionnelles
     </h1>
 
     <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6">
@@ -36,7 +36,11 @@
         <h3 class="text-md font-medium text-white-600 mb-4">
           {{ experience.company }} | {{ experience.duration }}
         </h3>
-        <p class="text-gray-400">{{ experience.description }}</p>
+        <ul class="descriptions-list list-disc list-inside ml-4">
+          <li *ngFor="let description of experience.descriptions" class="text-gray-400">
+            {{ description }}
+          </li>
+        </ul>
       </div>
     </div>
   </div>

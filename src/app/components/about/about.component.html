@@ -1,18 +1,51 @@
-<section *ngIf="isMobile$ | async" class="pb-4 border-b border-gray-700">
+<section *ngIf="  isHandheld$ | async" class="pb-4 border-b border-gray-700">
   <app-profil-card></app-profil-card>
 </section>
 
-<section class="about-section rounded-lg shadow-md mt-4 text-gray-800">
-  <h1 class="text-3xl font-bold mb-4 text-white">About Me</h1>
+<section class="about-section rounded-lg shadow-md text-gray-800">
+  <h1 class="text-3xl font-sigmar font-bold mb-4 text-white border-b border-gray-700 py-2">
+    A Propos
+  </h1>
   <p class="mb-6 text-white">
-    Hi, I'm a passionate web developer with a love for crafting intuitive and responsive web applications.
-    I specialize in front-end technologies such as Angular and React, with experience in back-end development using Node.js and Express.
+    Après avoir repris mes études il y a 4 ans dans le développement web, je
+    viens de clôturer mon parcours en obtenant un Mastère - Expert en
+    Développement Web et Web Mobile chez Sophia Ynov Campus.
+  </p>
+
+  <p class="mb-6 text-white">
+    Ces dernières années, j'ai eu l'opportunité d'acquérir une solide expérience
+    en alternance. D'abord au sein d'une start-up pendant 6 mois, puis pendant 2
+    ans et demi chez SQUAD, au sein de l'équipe AppSec Factory d'Aix-en-Provence
   </p>
   <p class="mb-6 text-white">
-    I'm always eager to learn new technologies and improve my skills, constantly pushing the boundaries of what's possible on the web.
-    When I'm not coding, you can find me exploring new tech, reading, or spending time in nature.
+    Ce parcours a été extrêmement enrichissant, aussi bien sur le plan technique
+    que humain, et m'a permis de développer des compétences pointues en
+    développement web et en sécurité applicative.
   </p>
   <p class="mb-6 text-white">
-    If you're looking for a dedicated developer to bring your project to life, feel free to reach out!
+    Aujourd'hui, je suis prêt à relever de nouveaux défis et je suis à la
+    recherche d'une opportunité en CDI pour continuer à évoluer dans ce domaine
+    passionnant.
   </p>
+</section>
+<section class="whatido-section rounded-lg shadow-md text-gray-800">
+  <h1 class="text-3xl font-sigmar font-bold mb-4 text-white border-b border-gray-700 pb-2">
+    Mon Expertise
+  </h1>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <div
+      *ngFor="let whatido of whatidos"
+      class=" flex bg-gray-800 border border-gray-600 shadow rounded "
+    >
+      <img
+        [src]="whatido.image"
+        alt="{{ whatido.title }}"
+        class=" xl:mb-2 rounded h-auto p-1"
+      />
+      <div class="pt-3">
+        <h3 class="text-lg ml-4 font-semibold text-white">{{ whatido.title }}</h3>
+        <p class="text-sm ml-4 text-gray-400">{{ whatido.description }}</p>
+      </div>
+    </div>
+  </div>
 </section>

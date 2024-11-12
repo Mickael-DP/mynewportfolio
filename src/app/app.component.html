@@ -1,21 +1,24 @@
+
 <div>
   <app-header></app-header>
 </div>
 
-<div class="main-content flex lg:flex-row lg:justify-around mt-2 lg:mt-10 mx-4 sm:mx-1 lg:mx-24 items-center space-y-6 lg:space-y-0 pb-24 lg:pb-0">
-  
+<div class="main-content flex md:flex-col lg:flex-row lg:justify-around mt-2 lg:mt-20 mx-4 sm:mx-1 lg:mx-24 items-center space-y-6 lg:space-y-0 pb-24 lg:pb-0">
+
   <!-- Profil Card Section -->
-  <div class="w-full lg:w-auto hidden lg:block">
+  <div class="w-full xl:w-auto hidden xl:block">
     <app-profil-card></app-profil-card>
   </div>
 
   <!-- Content Section -->
-  <div class="content bg-gray-900 w-full lg:mx-16 p-4 sm:p-6 rounded-lg border border-gray-600 shadow-lg">
+  <div class="content bg-gray-900 w-full xl:w-full xl:mx-16 md:w-full p-6 rounded-lg border border-gray-600 shadow-lg">
     <router-outlet></router-outlet>
   </div>
 
   <!-- Sidebar Section -->
-  <div class="lg:w-auto">
+  <div>
     <app-sidebar></app-sidebar>
   </div>
+
 </div>
+

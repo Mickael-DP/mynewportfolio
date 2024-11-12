@@ -2,12 +2,13 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { map, Observable, shareReplay } from 'rxjs';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { NgxCrypticTextComponent } from '@omnedia/ngx-cryptic-text';
 
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NgxCrypticTextComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })

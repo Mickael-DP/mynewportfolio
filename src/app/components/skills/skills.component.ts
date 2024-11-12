@@ -27,7 +27,6 @@ export class SkillsComponent {
     { icon: 'assets/skills/strapi-color.svg', name: 'Strapi' },
     { icon: 'assets/skills/refine-color.png', name: 'Refine' },
     { icon: 'assets/skills/mysql-color.svg', name: 'MySQL' },
-    { icon: 'assets/skills/mongodb-color.svg', name: 'MongoDB' },
   ];
   tools = [
     { icon: 'assets/tools/Figma-logo.svg', name: 'Figma' },

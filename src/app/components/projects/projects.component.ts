@@ -1,5 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { link } from 'fs';
+
 
 @Component({
   selector: 'app-projects',
@@ -9,22 +11,34 @@ import { Component } from '@angular/core';
   styleUrl: './projects.component.css',
 })
 export class ProjectsComponent {
+
   projects = [
     {
-      image: 'https://via.placeholder.com/280x200.png',
-      title: 'Projet1',
+      image: 'assets/img/BodyFiitAPP.png',
+      title: 'App. mobile - BodyFit APP (React Native)',
+      link: 'https://github.com/BodyFit-App/frontend-bodyfit-app'
     },
     {
-      image: 'https://via.placeholder.com/280x200.png',
-      title: 'Projet2',
+      image: 'assets/img/innoweb.png',
+      title: 'Site Internet - InnoWeb Digital (Next.js)',
+      link:'https://www.innowebdigital.com'
     },
     {
-      image: 'https://via.placeholder.com/280x200.png',
-      title: 'Projet3',
+      image: 'assets/img/aragonite.png',
+      title: "Site Internet - Restaurant l'Aragonite (React)",
+      link:'https://www.restaurantlaragonite.com'
     },
     {
-      image: 'https://via.placeholder.com/280x200.png',
-      title: 'Projet4',
+      image: 'assets/img/paniergourmand.png',
+      title: 'Outil gestion - Panier Gourmand (Bootstrap)',
     },
+  
   ];
+
+  onProjectClick(project: any) {
+    // Vérifiez si le lien existe, puis ouvrez le lien externe
+    if (project.link) {
+      window.open(project.link, '_blank'); // `_blank` ouvre le lien dans un nouvel onglet
+    }
+  }
 }

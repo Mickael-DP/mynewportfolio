@@ -1,8 +1,9 @@
 <section>
-    <h1 class="text-2xl font-bold mb-4">Mes projets</h1>
+    <h1 class="text-2xl font-sigmar font-bold mb-4 border-b border-gray-700 pb-2">Mes Projets Réalisés</h1>
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-  <div *ngFor="let project of projects" class="bg-gray-800 border border-gray-600 p-4 shadow rounded">
-    <img [src]="project.image" alt="{{ project.title }}" class="w-full h-auto mb-2 rounded border border-white-600" />
+  <div *ngFor="let project of projects" (click)="project.link && onProjectClick(project)" 
+  [ngClass]="{'cursor-pointer': project.link}"  class="bg-gray-800 border border-gray-600 p-4 shadow rounded">
+    <img [src]="project.image" alt="{{ project.title }}" class="w-full mb-2 rounded border border-white-600" />
     <h3 class="text-lg font-semibold">{{ project.title }}</h3>
   </div>
 </div>

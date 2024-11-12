@@ -1,56 +1,42 @@
-<header class="lg:bg-transparent bg-gray-900 border-b border-gray-600 lg:border-none">
-  <nav class="mx-auto flex max-w-7xl items-center justify-between p-4 lg:p-6 lg:px-8" aria-label="Global">
+<header
+  class="lg:bg-transparent bg-gray-900 border-b border-gray-600 lg:border-none"
+>
+  <nav
+    class="mx-auto flex max-w-7xl items-center justify-between p-4 lg:p-6 lg:px-8"
+    aria-label="Global"
+  >
     <!-- Logo Section -->
     <div class="flex items-center">
       <a href="#" class="-m-1.5 p-1.5">
-        <span class="text-2xl lg:text-4xl font-bold text-white tracking-wider shadow-md border-b-2 lg:border-b-4 border-gray-500 inline-block pb-1">
-          Mon Portfolio
-        </span>
+        <om-cryptic-text
+          class="text-2xl lg:text-4xl font-bold text-white tracking-wider inline-block pb-1 font-sigmar"
+          [text]="'Mon Portfolio'"
+        ></om-cryptic-text>
       </a>
     </div>
 
     <!-- Menu pour mobile -->
     <div *ngIf="isMobile$ | async; else desktopMenu" class="flex items-center">
-      <button class="p-2">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          fill="none"
-          stroke-width="1"
-          stroke="currentColor"
-          class="text-white"
-          aria-label="Toggle Dark Mode"
+      <!-- View Resume Button -->
+      <div class="text-center">
+        <button
+          class="flex items-center align-center bg-gray-800 border border-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 sm:px-6 rounded-lg shadow-md transition duration-300"
         >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
-          />
-        </svg>
-      </button>
+          <span><a href="assets/CV-Mickael-DallePasqualine.pdf">Mon CV</a></span>
+          <i class="fa-solid fa-arrow-up-from-bracket ml-4"></i>
+        </button>
+      </div>
     </div>
 
     <!-- Menu pour bureau -->
     <ng-template #desktopMenu>
-      <div class="flex items-center">
-        <button class="p-2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="none"
-            stroke-width="1"
-            stroke="currentColor"
-            class="text-white"
-            aria-label="Toggle Dark Mode"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
-            />
-          </svg>
+      <!-- View Resume Button -->
+      <div class="text-center">
+        <button
+          class="flex items-center bg-gray-900 hover:bg-gray-600 border-gray-600 border text-white font-bold py-2 px-4 sm:px-6 rounded-lg shadow-md transition duration-300"
+        >
+          <span><a href="assets/CV-Mickael-DallePasqualine.pdf">Télécharger mon CV</a></span>
+          <i class="fa-solid fa-arrow-up-from-bracket ml-4"></i>
         </button>
       </div>
     </ng-template>

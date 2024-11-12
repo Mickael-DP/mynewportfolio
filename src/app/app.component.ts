@@ -4,6 +4,7 @@ import { HeaderComponent } from "./components/header/header.component";
 import { SidebarComponent } from "./components/sidebar/sidebar.component";
 import { ProfilCardComponent } from "./components/profil-card/profil-card.component";
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { map, Observable, shareReplay } from 'rxjs';
 
 
 @Component({
@@ -14,17 +15,26 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit {
-  title = 'myportfolio';
+  isMobile$!: Observable<boolean>;
+  isTablet$!: Observable<boolean>;
 
-  isMobile: boolean = false;
+  constructor( private breakpointObserver: BreakpointObserver) {}
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  ngOnInit(): void {
+    // Initialiser les observables pour la taille de l'écran
+    this.isMobile$ = this.breakpointObserver.observe([Breakpoints.Handset])
+      .pipe(
+        map(result => result.matches),
+        shareReplay()
+      );
 
-  ngOnInit() {
-    // Surveiller les changements de taille d'écran
-    this.breakpointObserver.observe([Breakpoints.Handset])
-      .subscribe(result => {
-        this.isMobile = result.matches; // Si `true`, l’écran est en mode mobile
-      });
+    this.isTablet$ = this.breakpointObserver.observe([Breakpoints.Tablet])
+      .pipe(
+        map(result => result.matches),
+        shareReplay()
+      );
   }
+
+ 
+ 
 }
