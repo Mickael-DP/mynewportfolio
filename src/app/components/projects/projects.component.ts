@@ -19,9 +19,9 @@ export class ProjectsComponent {
       link: 'https://github.com/BodyFit-App/frontend-bodyfit-app'
     },
     {
-      image: 'assets/img/innoweb.png',
-      title: 'Site Internet - InnoWeb Digital (Next.js)',
-      link:'https://www.innowebdigital.com'
+      image: 'assets/img/mdallepasqualine.png',
+      title: 'Site Internet - MDP Développeur freelance (Next.js)',
+      link:'https://www.mdallepasqualine.com'
     },
     {
       image: 'assets/img/aragonite.png',
@@ -29,8 +29,9 @@ export class ProjectsComponent {
       link:'https://www.restaurantlaragonite.com'
     },
     {
-      image: 'assets/img/paniergourmand.png',
-      title: 'Outil gestion - Panier Gourmand (Bootstrap)',
+      image: 'assets/img/swantrad.png',
+      title: 'Plateforme en ligne - SwanTrad (Laravel)',
+      link: 'https://www.swantrad.com'
     },
   
   ];
