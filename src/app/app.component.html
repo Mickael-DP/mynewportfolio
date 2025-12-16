@@ -1,24 +1,152 @@
+<!-- Main Layout Container -->
+<div class="min-h-screen bg-slate-900 text-slate-100 relative">
 
-<div>
-  <app-header></app-header>
+
+
+  <div class="flex flex-col lg:flex-row">
+
+    <!-- Left Column: Sticky Profile (Desktop) -->
+    <aside
+      class="w-full lg:w-4/12 xl:w-3/12 lg:h-screen lg:sticky lg:top-0 p-6 lg:p-10 flex flex-col justify-center relative z-20">
+      <div class="glass-card h-full flex flex-col justify-between relative overflow-hidden">
+        <!-- Background Bloom -->
+        <div class="absolute -top-20 -left-20 w-60 h-60 bg-indigo-500/20 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-20 -right-20 w-60 h-60 bg-purple-500/20 rounded-full blur-3xl"></div>
+
+        <div class="relative z-10 flex flex-col h-full">
+          <app-profil-card></app-profil-card>
+
+        </div>
+      </div>
+    </aside>
+
+    <!-- Right Column: Scrollable Content -->
+    <main class="w-full lg:w-8/12 xl:w-9/12 p-6 pb-32 lg:p-12 lg:pb-12">
+
+      <!-- Desktop Top Navigation (Right Column) -->
+      <nav class="hidden lg:flex justify-end mb-12 sticky top-6 z-40">
+        <div
+          class="glass-card px-2 py-2 rounded-full inline-flex items-center gap-1 bg-slate-900/60 backdrop-blur-md border border-slate-700/50 shadow-lg">
+          <a href="#about"
+            class="px-5 py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-white/10 transition-all duration-300 flex items-center gap-2">
+            <i class="fas fa-user text-xs"></i>
+            <span>À Propos</span>
+          </a>
+          <a href="#experience"
+            class="px-5 py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-white/10 transition-all duration-300 flex items-center gap-2">
+            <i class="fas fa-briefcase text-xs"></i>
+            <span>Parcours</span>
+          </a>
+          <a href="#projects"
+            class="px-5 py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-white/10 transition-all duration-300 flex items-center gap-2">
+            <i class="fas fa-code text-xs"></i>
+            <span>Projets</span>
+          </a>
+          <a href="#skills"
+            class="px-5 py-2 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-white/10 transition-all duration-300 flex items-center gap-2">
+            <i class="fas fa-layer-group text-xs"></i>
+            <span>Compétences</span>
+          </a>
+          <a href="#contact"
+            class="px-5 py-2 rounded-full text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-500 shadow-lg shadow-indigo-500/20 transition-all duration-300 flex items-center gap-2">
+            <i class="fas fa-paper-plane text-xs"></i>
+            <span>Contact</span>
+          </a>
+        </div>
+      </nav>
+
+      <div class="space-y-24 lg:space-y-32">
+        <section id="about" class="scroll-mt-32">
+          <app-about></app-about>
+        </section>
+
+        <section id="experience" class="scroll-mt-24">
+          <h2 class="section-title flex items-center gap-3">
+            <i class="fas fa-briefcase text-indigo-400"></i> Parcours
+          </h2>
+          <app-experience></app-experience>
+        </section>
+
+        <section id="projects" class="scroll-mt-24">
+          <h2 class="section-title flex items-center gap-3">
+            <i class="fas fa-code text-indigo-400"></i> Projets
+          </h2>
+          <app-projects></app-projects>
+        </section>
+
+        <section id="skills" class="scroll-mt-24">
+          <h2 class="section-title flex items-center gap-3">
+            <i class="fas fa-layer-group text-indigo-400"></i> Compétences
+          </h2>
+          <app-skills></app-skills>
+        </section>
+
+        <section id="contact" class="scroll-mt-24 mb-48 lg:mb-24">
+          <h2 class="section-title flex items-center gap-3">
+            <i class="fas fa-paper-plane text-indigo-400"></i> Contact
+          </h2>
+          <app-contact></app-contact>
+        </section>
+
+      </div>
+    </main>
+
+  </div>
+
+  <!-- Mobile Navigation (Bottom Bar) -->
+  <!-- Mobile Navigation (Bottom Floating Pill) -->
+  <div class="fixed bottom-6 left-0 right-0 lg:hidden z-50 flex justify-center pointer-events-none">
+    <nav
+      class="glass-card flex items-center gap-1 px-2 py-2 pointer-events-auto shadow-2xl shadow-indigo-500/20 border border-slate-700/50 rounded-full bg-slate-900/80 backdrop-blur-xl">
+
+      <a href="#about"
+        class="group relative px-4 py-2 flex flex-col items-center justify-center rounded-full hover:bg-white/10 transition-all duration-300">
+        <i class="fas fa-user text-xl text-slate-400 group-hover:text-indigo-400 mb-0.5 transition-colors"></i>
+        <span class="text-[9px] font-medium text-slate-500 group-hover:text-indigo-300 transition-colors">À
+          Propos</span>
+        <div
+          class="absolute -bottom-1 w-1 h-1 bg-indigo-500 rounded-full opacity-0 group-hover:opacity-100 transition-all">
+        </div>
+      </a>
+
+      <a href="#experience"
+        class="group relative px-4 py-2 flex flex-col items-center justify-center rounded-full hover:bg-white/10 transition-all duration-300">
+        <i class="fas fa-briefcase text-xl text-slate-400 group-hover:text-indigo-400 mb-0.5 transition-colors"></i>
+        <span
+          class="text-[9px] font-medium text-slate-500 group-hover:text-indigo-300 transition-colors">Parcours</span>
+        <div
+          class="absolute -bottom-1 w-1 h-1 bg-indigo-500 rounded-full opacity-0 group-hover:opacity-100 transition-all">
+        </div>
+      </a>
+
+      <a href="#projects"
+        class="group relative px-4 py-2 flex flex-col items-center justify-center rounded-full hover:bg-white/10 transition-all duration-300">
+        <i class="fas fa-code text-xl text-slate-400 group-hover:text-indigo-400 mb-0.5 transition-colors"></i>
+        <span class="text-[9px] font-medium text-slate-500 group-hover:text-indigo-300 transition-colors">Projets</span>
+        <div
+          class="absolute -bottom-1 w-1 h-1 bg-indigo-500 rounded-full opacity-0 group-hover:opacity-100 transition-all">
+        </div>
+      </a>
+
+      <a href="#skills"
+        class="group relative px-4 py-2 flex flex-col items-center justify-center rounded-full hover:bg-white/10 transition-all duration-300">
+        <i class="fas fa-layer-group text-xl text-slate-400 group-hover:text-indigo-400 mb-0.5 transition-colors"></i>
+        <span class="text-[9px] font-medium text-slate-500 group-hover:text-indigo-300 transition-colors">Stack</span>
+        <div
+          class="absolute -bottom-1 w-1 h-1 bg-indigo-500 rounded-full opacity-0 group-hover:opacity-100 transition-all">
+        </div>
+      </a>
+
+      <a href="#contact"
+        class="group relative px-4 py-2 flex flex-col items-center justify-center rounded-full hover:bg-white/10 transition-all duration-300">
+        <i class="fas fa-paper-plane text-xl text-slate-400 group-hover:text-indigo-400 mb-0.5 transition-colors"></i>
+        <span class="text-[9px] font-medium text-slate-500 group-hover:text-indigo-300 transition-colors">Contact</span>
+        <div
+          class="absolute -bottom-1 w-1 h-1 bg-indigo-500 rounded-full opacity-0 group-hover:opacity-100 transition-all">
+        </div>
+      </a>
+
+    </nav>
+  </div>
+
 </div>
-
-<div class="main-content flex md:flex-col lg:flex-row lg:justify-around mt-2 lg:mt-10 mx-4 sm:mx-1 lg:mx-24 items-center space-y-6 lg:space-y-0 pb-24 lg:pb-0">
-
-  <!-- Profil Card Section -->
-  <div class="w-full xl:w-auto hidden xl:block">
-    <app-profil-card></app-profil-card>
-  </div>
-
-  <!-- Content Section -->
-  <div class="content bg-gray-900 w-full xl:w-full xl:mx-16 md:w-full p-6 rounded-lg border border-gray-600 shadow-lg">
-    <router-outlet></router-outlet>
-  </div>
-
-  <!-- Sidebar Section -->
-  <div>
-    <app-sidebar></app-sidebar>
-  </div>
-
-</div>
-

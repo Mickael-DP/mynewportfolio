@@ -1,8 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from "./components/header/header.component";
-import { SidebarComponent } from "./components/sidebar/sidebar.component";
+import { CommonModule } from '@angular/common';
+
 import { ProfilCardComponent } from "./components/profil-card/profil-card.component";
+import { AboutComponent } from "./components/about/about.component";
+import { ExperienceComponent } from "./components/experience/experience.component";
+import { ProjectsComponent } from "./components/projects/projects.component";
+import { SkillsComponent } from "./components/skills/skills.component";
+import { ContactComponent } from "./components/contact/contact.component";
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { map, Observable, shareReplay } from 'rxjs';
 
@@ -10,7 +14,16 @@ import { map, Observable, shareReplay } from 'rxjs';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, SidebarComponent, ProfilCardComponent],
+  imports: [
+
+    ProfilCardComponent,
+    AboutComponent,
+    ExperienceComponent,
+    ProjectsComponent,
+    SkillsComponent,
+    ContactComponent,
+    CommonModule
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -18,7 +31,7 @@ export class AppComponent implements OnInit {
   isMobile$!: Observable<boolean>;
   isTablet$!: Observable<boolean>;
 
-  constructor( private breakpointObserver: BreakpointObserver) {}
+  constructor(private breakpointObserver: BreakpointObserver) { }
 
   ngOnInit(): void {
     // Initialiser les observables pour la taille de l'écran
@@ -35,6 +48,6 @@ export class AppComponent implements OnInit {
       );
   }
 
- 
- 
+
+
 }
