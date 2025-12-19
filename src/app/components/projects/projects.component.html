@@ -1,12 +1,61 @@
-<section>
-    <h1 class="text-2xl font-sigmar font-bold mb-4 border-b border-gray-700 pb-2">Mes Projets Réalisés</h1>
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-  <div *ngFor="let project of projects" (click)="project.link && onProjectClick(project)" 
-  [ngClass]="{'cursor-pointer': project.link}"  class="bg-gray-800 border border-gray-600 p-4 shadow rounded">
-    <img [src]="project.image" alt="{{ project.title }}" class="w-full h-48 object-cover object-center mb-2 rounded border border-white-600 hover:scale-105 transition-transform duration-300" />
-    <h3 class="text-lg font-semibold">{{ project.title }}</h3>
+<section class="py-2">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <div *ngFor="let project of projects" (click)="project.link && onProjectClick(project)"
+      [ngClass]="{'cursor-pointer': project.link}"
+      class="project-card group relative overflow-hidden rounded-3xl border border-slate-700/50 bg-slate-900/40 backdrop-blur-xl transition-all duration-500 hover:border-indigo-500/50">
+
+      <!-- Hover Glow Effect -->
+      <div
+        class="absolute -inset-px bg-gradient-to-r from-indigo-500 to-purple-500 opacity-0 group-hover:opacity-15 transition-opacity duration-500">
+      </div>
+
+      <!-- Image Container -->
+      <div class="relative h-56 overflow-hidden">
+        <!-- Category Badge -->
+        <div class="absolute top-4 left-4 z-30">
+          <span
+            class="px-3 py-1 rounded-full text-[10px] uppercase tracking-wider font-bold bg-indigo-600 text-white shadow-lg shadow-indigo-500/40 border border-indigo-400/30 backdrop-blur-md">
+            {{ project.category }}
+          </span>
+        </div>
+
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent z-10"></div>
+        <img [src]="project.image" [alt]="project.title"
+          class="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-1000 ease-out" />
+      </div>
+
+      <!-- Content -->
+      <div class="p-8 relative z-20">
+        <h3 class="text-2xl font-bold text-white group-hover:text-indigo-400 transition-colors duration-300 mb-3">
+          {{ project.title }}
+        </h3>
+
+        <p
+          class="text-slate-400 text-sm leading-relaxed mb-6 line-clamp-2 group-hover:text-slate-300 transition-colors">
+          {{ project.description }}
+        </p>
+
+        <!-- Tags -->
+        <div class="flex flex-wrap gap-2 mb-8">
+          <span *ngFor="let tag of project.tags"
+            class="text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded bg-slate-800/50 text-slate-400 border border-slate-700/50 group-hover:border-indigo-500/20 group-hover:text-indigo-300/70 transition-all">
+            {{ tag }}
+          </span>
+        </div>
+
+        <!-- Footer Action -->
+        <div class="flex items-center justify-between">
+          <div
+            class="flex items-center text-sm font-semibold text-indigo-400 group-hover:text-indigo-300 transition-all transform translate-x-0 group-hover:translate-x-1">
+            <span>Explorer le projet</span>
+            <svg xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-
 </section>
-

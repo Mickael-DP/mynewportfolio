@@ -1,27 +1,48 @@
-<section>
-  <h1 class="text-xl lg:text-3xl xl:text-3xl font-sigmar font-bold mb-4 border-b border-gray-700 pb-2">Mes Technologies</h1>
-  <div class="grid  grid-cols-4 md:grid-cols-4 lg:grid-cols-8 gap-4">
-    <div
-      *ngFor="let skill of skills"
-      class="pt-4 shadow rounded flex items-center flex-col text-center"
-    >
-      <div class="border border-gray-600 rounded-lg p-2">
-        <img [src]="skill.icon" alt="{{ skill.name }}" class="lg:w-12 lg:h-12 w-10 h-10" />
-      </div>
-      <h3 class="text-sm mt-1 font-semibold">{{ skill.name }}</h3>
+<section class="space-y-8">
+  <div *ngFor="let category of skillCategories" class="skill-category">
+    <div class="flex items-center gap-4 mb-8">
+      <div [ngClass]="{
+          'bg-indigo-500': category.color === 'indigo',
+          'bg-purple-500': category.color === 'purple',
+          'bg-blue-500': category.color === 'blue'
+        }" class="h-10 w-1.5 rounded-full"></div>
+      <h3 class="text-2xl font-bold text-white tracking-tight">{{ category.title }}</h3>
     </div>
-  </div>
 
-  <h1 class="text-xl lg:text-3xl xl:text-3xl font-sigmar font-bold mb-4 pt-4 border-b border-gray-700 pb-2">Mes Outils</h1>
-  <div class="grid  grid-cols-4 md:grid-cols-4 lg:grid-cols-8 gap-4">
-    <div
-      *ngFor="let tool of tools"
-      class="pt-4 shadow rounded flex items-center flex-col text-center"
-    >
-      <div class="border border-gray-600 rounded-lg p-2">
-        <img [src]="tool.icon" alt="{{ tool.name }}" class="lg:w-12 lg:h-12 w-10 h-10" />
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 sm:gap-5">
+      <div *ngFor="let skill of category.skills; let i = index"
+        class="skill-card group relative p-4 sm:p-5 flex flex-col items-center justify-center rounded-2xl border border-slate-700/50 bg-slate-900/40 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-slate-500/50"
+        [style.animation-delay]="i * 50 + 'ms'">
+
+        <!-- Hover Background Glow -->
+        <div [ngClass]="{
+            'group-hover:bg-indigo-500/10': category.color === 'indigo',
+            'group-hover:bg-purple-500/10': category.color === 'purple',
+            'group-hover:bg-blue-500/10': category.color === 'blue'
+          }" class="absolute inset-0 rounded-2xl transition-colors duration-300"></div>
+
+        <!-- Icon Container -->
+        <div
+          class="relative z-10 w-10 h-10 sm:w-12 sm:h-12 mb-3 sm:mb-4 flex items-center justify-center bg-slate-800/50 rounded-xl group-hover:bg-slate-700/50 transition-colors shadow-inner">
+          <img [src]="skill.icon" [alt]="skill.name"
+            class="w-6 h-6 sm:w-8 sm:h-8 object-contain transition-transform duration-500 group-hover:scale-110" />
+        </div>
+
+        <!-- Label -->
+        <span
+          class="relative z-10 text-sm font-semibold text-slate-400 group-hover:text-white transition-colors text-center">
+          {{ skill.name }}
+        </span>
+
+        <!-- Indicator dot on hover -->
+        <div [ngClass]="{
+            'bg-indigo-500': category.color === 'indigo',
+            'bg-purple-500': category.color === 'purple',
+            'bg-blue-500': category.color === 'blue'
+          }"
+          class="absolute bottom-3 w-1 h-1 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-0 group-hover:scale-100 shadow-[0_0_8px_rgba(255,255,255,0.5)]">
+        </div>
       </div>
-      <h3 class="text-sm mt-1 font-semibold">{{ tool.name }}</h3>
     </div>
   </div>
 </section>

@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { link } from 'fs';
+
 
 
 @Component({
@@ -15,25 +15,36 @@ export class ProjectsComponent {
   projects = [
     {
       image: 'assets/img/BodyFiitAPP.png',
-      title: 'App. mobile - BodyFit APP (React Native)',
+      title: 'BodyFit APP',
+      category: 'Application mobile',
+      description: 'Application mobile de fitness et suivi d\'entraînement dans le cadre de mon projet de fin d\'études.',
+      tags: ['React Native', 'Supabase'],
       link: 'https://github.com/BodyFit-App/frontend-bodyfit-app'
     },
     {
       image: 'assets/img/mdallepasqualine.png',
-      title: 'Site Internet - MDP Développeur freelance (Next.js)',
-      link:'https://www.mdallepasqualine.com'
+      title: 'MDP Développeur',
+      category: 'Site vitrine',
+      description: 'Site vitrine personnel pour mon activité de freelance.',
+      tags: ['Next.js', 'Tailwind CSS', 'Git', 'Vercel'],
+      link: 'https://www.mdallepasqualine.com'
     },
     {
       image: 'assets/img/aragonite.png',
-      title: "Site Internet - Restaurant l'Aragonite (React)",
-      link:'https://www.restaurantlaragonite.com'
+      title: 'Restaurant L\'Aragonite',
+      category: 'Site vitrine',
+      description: 'Site vitrine pour un restaurant de cuisine traditionnelle provençale et pizzas maison.',
+      tags: ['Next.js', 'Tailwind CSS', 'Git', 'Vercel'],
+      link: 'https://site-aragonite-v2.vercel.app/'
     },
     {
       image: 'assets/img/swantrad.png',
-      title: 'Plateforme en ligne - SwanTrad (Laravel)',
+      title: 'SwanTrad',
+      category: 'LegalTech',
+      description: 'Plateforme de digitalisation de traductions assermentées simplifiant les démarches administratives.',
+      tags: ['Laravel', 'Blade', 'Bootstrap', 'MySQL', 'Git'],
       link: 'https://www.swantrad.com'
     },
-  
   ];
 
   onProjectClick(project: any) {
