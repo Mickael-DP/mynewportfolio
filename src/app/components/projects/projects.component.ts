@@ -13,14 +13,7 @@ import { Component } from '@angular/core';
 export class ProjectsComponent {
 
   projects = [
-    {
-      image: 'assets/img/BodyFiitAPP.png',
-      title: 'BodyFit APP',
-      category: 'Application mobile',
-      description: 'Application mobile de fitness et suivi d\'entraînement dans le cadre de mon projet de fin d\'études.',
-      tags: ['React Native', 'Supabase'],
-      link: 'https://github.com/BodyFit-App/frontend-bodyfit-app'
-    },
+
     {
       image: 'assets/img/mdallepasqualine.png',
       title: 'MDP Développeur',
@@ -44,6 +37,14 @@ export class ProjectsComponent {
       description: 'Plateforme de digitalisation de traductions assermentées simplifiant les démarches administratives.',
       tags: ['Laravel', 'Blade', 'Bootstrap', 'MySQL', 'Git'],
       link: 'https://www.swantrad.com'
+    },
+    {
+      image: 'assets/img/BodyFiitAPP.png',
+      title: 'BodyFit APP',
+      category: 'Application mobile',
+      description: 'Application mobile de fitness et suivi d\'entraînement dans le cadre de mon projet de fin d\'études.',
+      tags: ['React Native', 'Supabase'],
+      link: 'https://github.com/BodyFit-App/frontend-bodyfit-app'
     },
   ];
 
