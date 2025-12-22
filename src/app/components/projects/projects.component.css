@@ -51,3 +51,21 @@
         transform: translateY(0);
     }
 }
+
+/* Role & Tech Stack Labels */
+.text-indigo-400.font-bold {
+    letter-spacing: 0.025em;
+}
+
+.project-card .space-y-4 p {
+    line-height: 1.6;
+}
+
+/* Tooltip/Buttons enhancements */
+.project-card button {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card button:hover {
+    transform: translateY(-2px);
+}
