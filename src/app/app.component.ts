@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { inject } from '@vercel/analytics';
 
 import { ProfilCardComponent } from "./components/profil-card/profil-card.component";
 import { AboutComponent } from "./components/about/about.component";
@@ -34,6 +35,7 @@ export class AppComponent implements OnInit {
   constructor(private breakpointObserver: BreakpointObserver) { }
 
   ngOnInit(): void {
+    inject();
     // Initialiser les observables pour la taille de l'écran
     this.isMobile$ = this.breakpointObserver.observe([Breakpoints.Handset])
       .pipe(
