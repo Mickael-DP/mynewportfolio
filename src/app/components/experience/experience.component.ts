@@ -13,7 +13,7 @@ export class ExperienceComponent {
     {
       position: 'Développeur Frontend - Freelance',
       company: 'SWANTRAD',
-      duration: 'Juin 2025 - Présent',
+      duration: 'Juin 2025 - Décembre 2025',
       descriptions: [
         "Implémentation de nouveaux composants du back-office",
         "Ajout de services et de nouvelles fonctionnalités",
