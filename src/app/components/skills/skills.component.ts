@@ -30,7 +30,8 @@ export class SkillsComponent {
     {
       title: 'Back-end',
       color: 'purple',
-      skills: [
+      skills: [  
+        { icon: 'assets/skills/java-color.png', name: 'Java' },
         { icon: 'assets/skills/php-color.svg', name: 'PHP' },
         { icon: 'assets/skills/symfony.png', name: 'Symfony' },
         { icon: 'assets/skills/laravel-color.svg', name: 'Laravel' },
