@@ -52,6 +52,25 @@ export class ProjectsComponent {
       link: '',
       github: 'https://github.com/BodyFit-App/frontend-bodyfit-app'
     },
+     {
+      image: 'assets/img/gestionnaire.png',
+      title:'Ma banque',
+      category: 'Application web',
+      description: 'Application de gestion bancaire afin de monter en compétence sur mon temps perso.',
+      role: 'Développement frontend Angular, développement backend Java Spring BOOT, authentification JWT et gestion de données avec mySQL.',
+      tags: ['Angular', 'Typescript', 'Java Spring BOOT', 'mySQL'],
+      link: 'https://gestionnaire-bancaire.vercel.app/',
+      githubFront: 'https://github.com/Mickael-DP/gestionnaire-bancaire-angular',
+      githubBack:'https://github.com/Mickael-DP/gestionnaire-bancaire-springboot'
+    }, {
+      image: 'assets/img/app-mobile-coach-ia.png',
+      title:'AlgoFit',
+      category: 'Application mobile',
+      description: 'Application mobile de coaching sportif personnalisé afin de monter en compétence sur mon temps perso.',
+      role: 'Développement mobile React Native et Expo, intégration de l\'API OpenAI pour générer des programmes d\'entraînement personnalisés',
+      tags: ['React Native', 'Expo', 'OpenAI API'],
+      github: 'https://github.com/Mickael-DP/AlgoFit'
+    },
   ];
 
   onLinkClick(url: string) {
