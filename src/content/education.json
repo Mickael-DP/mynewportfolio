@@ -1,0 +1,18 @@
+[
+  {
+    "id": "ynov-mastere",
+    "order": 1,
+    "degree": "Mastère — Expert en Développement Fullstack (BAC+5)",
+    "institution": "Sophia YNOV Campus",
+    "year": "2021 - 2024",
+    "detail": "Formation en alternance axée sur le cycle de vie complet d'une application web : architecture logicielle, développement front-end et back-end, tests, déploiement continu et bonnes pratiques DevOps (Docker)."
+  },
+  {
+    "id": "tetris-titre-pro",
+    "order": 2,
+    "degree": "Titre Professionnel — Développeur web et web mobile (BAC+2)",
+    "institution": "SCIC Tétris",
+    "year": "2020 - 2021",
+    "detail": "Formation orientée conception et développement d'applications web et mobiles : interfaces dynamiques, logique back-end, bases de données, CMS et e-commerce."
+  }
+]

@@ -1,0 +1,103 @@
+[
+  {
+    "id": "swantrad",
+    "order": 1,
+    "title": "SwanTrad",
+    "category": "LegalTech — Mission freelance",
+    "description": "Plateforme SaaS de traduction assermentée en ligne. Reprise d'une base de code héritée, remise à plat du back-office et livraison de nouvelles fonctionnalités post-lancement.",
+    "role": "Refonte du back-office, correction des anomalies héritées, intégration de la signature électronique qualifiée, en contact direct avec le client.",
+    "tags": [
+      "Laravel",
+      "MySQL",
+      "Bootstrap",
+      "Blade"
+    ],
+    "image": "swantrad.png",
+    "link": "https://www.swantrad.com"
+  },
+  {
+    "id": "ma-banque",
+    "order": 2,
+    "title": "Ma Banque",
+    "category": "Application web fullstack",
+    "description": "Application bancaire fullstack : API REST sécurisée, gestion des comptes, virements et historique des mouvements.",
+    "role": "Architecture en couches côté back (Spring Boot), structure modulaire core/features/shared côté front (Angular), authentification JWT, tests unitaires et base de données Dockerisée.",
+    "tags": [
+      "Angular",
+      "TypeScript",
+      "Java",
+      "Spring Boot",
+      "MySQL",
+      "Docker"
+    ],
+    "image": "gestionnaire.png",
+    "link": "https://gestionnaire-bancaire.vercel.app/",
+    "githubFront": "https://github.com/Mickael-DP/gestionnaire-bancaire-angular",
+    "githubBack": "https://github.com/Mickael-DP/gestionnaire-bancaire-springboot"
+  },
+  {
+    "id": "algofit",
+    "order": 3,
+    "title": "AlgoFit",
+    "category": "Application mobile — IA",
+    "description": "Application mobile de coaching sportif : génération de programmes d'entraînement personnalisés via l'API OpenAI.",
+    "role": "Développement React Native/Expo, intégration OpenAI, génération dynamique de programmes adaptés au profil utilisateur.",
+    "tags": [
+      "React Native",
+      "Expo",
+      "OpenAI API"
+    ],
+    "image": "app-mobile-coach-ia.png",
+    "github": "https://github.com/Mickael-DP/AlgoFit"
+  },
+  {
+    "id": "bodyfit-app",
+    "order": 4,
+    "title": "BodyFit APP",
+    "category": "Application mobile",
+    "description": "Application cross-platform de fitness et de suivi d'entraînement, avec authentification et données en temps réel.",
+    "role": "Développement React Native, authentification Supabase, suivi des performances en temps réel.",
+    "tags": [
+      "React Native",
+      "Expo",
+      "Supabase"
+    ],
+    "image": "BodyFiitAPP.png",
+    "github": "https://github.com/BodyFit-App/frontend-bodyfit-app"
+  },
+  {
+    "id": "aragonite",
+    "order": 5,
+    "title": "Restaurant L'Aragonite",
+    "category": "Site vitrine — Client",
+    "description": "Site vitrine pour un restaurant client : menu, informations pratiques et contact. Migré de React vers Next.js et redesigné en 2026.",
+    "role": "Maquette, intégration frontend responsive, optimisation mobile et SEO.",
+    "tags": [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Vercel"
+    ],
+    "image": "aragonite.png",
+    "link": "https://site-aragonite-v2.vercel.app/",
+    "github": "https://github.com/Mickael-DP/site-aragonite-v2"
+  },
+  {
+    "id": "mdp-developpeur",
+    "order": 6,
+    "title": "MDP Développeur",
+    "category": "Site vitrine",
+    "description": "Ce site : conçu et développé de la maquette à la mise en ligne, migré d'Angular vers Astro et redesigné en 2026.",
+    "role": "Architecture complète, optimisation SEO et performance, formulaire de contact.",
+    "tags": [
+      "Astro",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Vercel"
+    ],
+    "image": "mdallepasqualine.png",
+    "link": "https://www.mdallepasqualine.com",
+    "github": "https://github.com/Mickael-DP/mynewportfolio"
+  }
+]

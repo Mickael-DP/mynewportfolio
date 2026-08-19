@@ -1,0 +1,85 @@
+---
+import { Image } from 'astro:assets';
+import { projectImages } from '../assets/projects';
+
+interface Props {
+  index: number;
+  span: string;
+  tone: 'mist' | 'ink' | 'paper' | 'coral' | 'accent';
+  text: 'full' | 'medium' | 'compact';
+  title: string;
+  category: string;
+  description: string;
+  role: string;
+  tags: string[];
+  image: string;
+  link?: string;
+  github?: string;
+  githubFront?: string;
+  githubBack?: string;
+}
+
+const { index, span, tone, text, title, category, description, role, tags, image, link, github, githubFront, githubBack } =
+  Astro.props;
+
+const number = String(index).padStart(2, '0');
+const codeLinks = [
+  github && { label: 'GitHub', href: github },
+  githubFront && { label: 'GitHub (front)', href: githubFront },
+  githubBack && { label: 'GitHub (back)', href: githubBack },
+].filter(Boolean) as { label: string; href: string }[];
+
+const tones = {
+  mist: { card: 'bg-mist text-fg', cat: 'text-accent', tag: 'bg-bg/70 text-secondary', num: 'text-muted', link: 'text-fg hover:text-accent', linkMuted: 'text-secondary hover:text-accent' },
+  ink: { card: 'bg-fg text-bg', cat: 'text-highlight', tag: 'bg-bg/10 text-bg', num: 'text-bg/50', link: 'text-bg hover:text-highlight', linkMuted: 'text-bg/70 hover:text-highlight' },
+  paper: { card: 'bg-bg text-fg border border-border', cat: 'text-accent', tag: 'border border-border text-secondary', num: 'text-muted', link: 'text-fg hover:text-accent', linkMuted: 'text-secondary hover:text-accent' },
+  coral: { card: 'bg-highlight text-fg', cat: 'text-fg/70', tag: 'bg-fg/10 text-fg', num: 'text-fg/50', link: 'text-fg hover:underline', linkMuted: 'text-fg/70 hover:underline' },
+  accent: { card: 'bg-accent text-bg', cat: 'text-bg/70', tag: 'bg-bg/15 text-bg', num: 'text-bg/50', link: 'text-bg hover:underline', linkMuted: 'text-bg/70 hover:underline' },
+} as const;
+
+const t = tones[tone];
+const visibleTags = text === 'compact' ? tags.slice(0, 3) : tags;
+---
+
+<article class={`reveal flex flex-col rounded-sm p-6 ${span} ${t.card}`} style={`transition-delay: ${Math.min(index - 1, 4) * 60}ms`}>
+  <div class="flex items-baseline justify-between gap-4">
+    <span class={`font-mono text-xs ${t.num}`}>{number}</span>
+    <span class={`font-mono text-[10px] uppercase tracking-wider ${t.cat}`}>{category}</span>
+  </div>
+
+  <Image
+    src={projectImages[image]}
+    alt={`Aperçu du projet ${title}`}
+    width={1200}
+    height={675}
+    class="mt-4 aspect-video w-full rounded-sm object-cover"
+    loading={index <= 2 ? 'eager' : 'lazy'}
+  />
+
+  <h3 class="mt-5 font-display text-2xl font-black leading-tight">{title}</h3>
+
+  <p class={`mt-3 text-sm leading-relaxed ${text === 'compact' ? 'line-clamp-2' : ''}`}>{description}</p>
+
+  {text === 'full' && <p class="mt-2 text-sm leading-relaxed opacity-80">{role}</p>}
+
+  <ul class="mt-5 flex flex-wrap gap-2">
+    {visibleTags.map((tag) => (
+      <li class={`rounded-full px-3 py-1 font-mono text-[10px] font-semibold uppercase tracking-wider ${t.tag}`}>
+        {tag}
+      </li>
+    ))}
+  </ul>
+
+  <div class="mt-auto flex flex-wrap gap-x-5 gap-y-2 pt-6 font-mono text-xs font-semibold uppercase tracking-wider">
+    {link && (
+      <a href={link} target="_blank" rel="noopener" class={`transition-colors ${t.link}`}>
+        Voir le site →
+      </a>
+    )}
+    {codeLinks.map((l) => (
+      <a href={l.href} target="_blank" rel="noopener" class={`transition-colors ${t.linkMuted}`}>
+        {l.label} →
+      </a>
+    ))}
+  </div>
+</article>

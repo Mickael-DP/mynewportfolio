@@ -1,0 +1,29 @@
+---
+import { getCollection } from 'astro:content';
+import ProjectCard from './ProjectCard.astro';
+
+const projects = (await getCollection('projects')).sort((a, b) => a.data.order - b.data.order);
+
+// Bento pattern: (span out of 6 cols) / (background tone), cycling every 6 cards.
+const layout = [
+  { span: 'md:col-span-4', tone: 'mist', text: 'full' },
+  { span: 'md:col-span-2', tone: 'ink', text: 'compact' },
+  { span: 'md:col-span-3', tone: 'paper', text: 'medium' },
+  { span: 'md:col-span-3', tone: 'coral', text: 'medium' },
+  { span: 'md:col-span-3', tone: 'accent', text: 'medium' },
+  { span: 'md:col-span-3', tone: 'paper', text: 'medium' },
+];
+---
+
+<section id="projets" class="mx-auto max-w-6xl scroll-mt-20 px-6 py-20 md:px-10 md:py-28">
+  <div class="flex items-baseline justify-between gap-4">
+    <h2 class="font-display text-3xl font-black text-fg md:text-4xl">Projets</h2>
+    <span class="font-mono text-xs uppercase tracking-wider text-muted">{projects.length} sélectionnés</span>
+  </div>
+
+  <div class="mt-8 grid grid-cols-1 gap-4 md:grid-cols-6">
+    {projects.map((project, i) => (
+      <ProjectCard index={i + 1} {...layout[i % layout.length]} {...project.data} />
+    ))}
+  </div>
+</section>

@@ -1,0 +1,89 @@
+[
+  {
+    "id": "swantrad-freelance",
+    "order": 1,
+    "position": "Développeur Fullstack — Freelance",
+    "company": "SwanTrad",
+    "duration": "Juin 2025 - Juillet 2026",
+    "descriptions": [
+      "Reprise et refonte d'une base de code existante sur une plateforme SaaS de traduction assermentée",
+      "Restructuration complète du back-office (sidebar) et correction des anomalies héritées",
+      "Développement de fonctionnalités post-lancement (temps réel, paiement)",
+      "Régie partielle avec contact direct client pour le cadrage et le suivi des tâches"
+    ],
+    "technologies": [
+      "Laravel",
+      "Blade",
+      "Bootstrap",
+      "MySQL",
+      "Git",
+      "Notion"
+    ]
+  },
+  {
+    "id": "squad-frontend-freelance",
+    "order": 2,
+    "position": "Développeur Frontend — Freelance",
+    "company": "SQUAD",
+    "duration": "Mars 2025 - Décembre 2025",
+    "descriptions": [
+      "Refonte complète du tunnel de réservation en ligne (B2B & B2C) et du site vitrine de la Méridionale, compagnie de transport maritime nationale, de la conception jusqu'à la livraison",
+      "Intégration d'un CMS headless Drupal et consommation d'une API Java",
+      "Tests automatisés unitaires et end-to-end (Jest)",
+      "Équipe pluridisciplinaire de 10 personnes, méthodologie Agile Scrum"
+    ],
+    "technologies": [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Drupal",
+      "Jest",
+      "Git",
+      "Docker",
+      "Jira"
+    ]
+  },
+  {
+    "id": "squad-alternance",
+    "order": 3,
+    "position": "Développeur Web — Alternance",
+    "company": "SQUAD",
+    "duration": "Avril 2022 - Octobre 2024",
+    "descriptions": [
+      "Développement et maintenance sur 2 ans d'une bibliothèque de composants React/Material UI adaptée à la charte graphique de la CMA-CGM",
+      "Composants custom non natifs à MUI, migration vers une version majeure, tests unitaires et documentation sous Storybook",
+      "Cycles Agile/Scrum sur des projets clients : nouvelles fonctionnalités, corrections de bugs",
+      "POC Next.js/Strapi pour explorer une offre CMS headless à destination de nouveaux clients"
+    ],
+    "technologies": [
+      "React",
+      "TypeScript",
+      "Storybook",
+      "Material UI",
+      "Strapi",
+      "Next.js",
+      "Git",
+      "Docker",
+      "Jira"
+    ]
+  },
+  {
+    "id": "niceflow-alternance",
+    "order": 4,
+    "position": "Développeur Web — Alternance",
+    "company": "Niceflow",
+    "duration": "Septembre 2021 - Avril 2022",
+    "descriptions": [
+      "Conception et livraison de 3 à 4 sites vitrines et e-commerce clients, de la maquette UI/UX sur Figma jusqu'à la mise en production",
+      "Accompagnement client à la prise en main du CMS via des tutoriels vidéo Loom sur mesure"
+    ],
+    "technologies": [
+      "WordPress",
+      "Webflow",
+      "PHP",
+      "HTML",
+      "CSS",
+      "Figma"
+    ]
+  }
+]

@@ -1,0 +1,139 @@
+---
+const links = [
+  { href: '#experience', label: 'Expérience' },
+  { href: '#projets', label: 'Projets' },
+  { href: '#competences', label: 'Compétences' },
+  { href: '#contact', label: 'Contact' },
+];
+---
+
+<header class="sticky top-0 z-50 border-b border-border bg-bg">
+  <nav class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-4 md:px-10">
+    <a href="#top" class="font-display text-sm font-black tracking-tight text-fg sm:text-lg">
+      Mickaël Dalle Pasqualine<span class="text-highlight">.</span>
+    </a>
+
+    <ul class="hidden items-center gap-8 font-mono text-xs uppercase tracking-wider text-secondary md:flex">
+      {links.map((link) => (
+        <li>
+          <a href={link.href} class="transition-colors hover:text-accent">{link.label}</a>
+        </li>
+      ))}
+    </ul>
+
+    <a
+      href="/assets/CV-DallePasqualine-Mickael.pdf"
+      target="_blank"
+      rel="noopener"
+      class="hidden rounded-sm border-2 border-fg px-4 py-2 font-mono text-xs font-semibold uppercase tracking-wider text-fg transition-colors hover:bg-fg hover:text-bg md:inline-block"
+    >
+      CV
+    </a>
+
+    <button
+      id="nav-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="nav-mobile-menu"
+      aria-label="Ouvrir le menu"
+      class="flex h-9 w-9 shrink-0 items-center justify-center text-fg md:hidden"
+    >
+      <span class="burger" aria-hidden="true">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      </span>
+    </button>
+  </nav>
+
+  <div id="nav-mobile-menu" class="mobile-menu md:hidden">
+    <ul class="flex flex-col gap-1 px-6 py-4 font-mono text-sm uppercase tracking-wider text-secondary">
+      {links.map((link) => (
+        <li>
+          <a href={link.href} class="block py-2 transition-colors hover:text-accent">{link.label}</a>
+        </li>
+      ))}
+      <li class="pt-2">
+        <a
+          href="/assets/CV-DallePasqualine-Mickael.pdf"
+          target="_blank"
+          rel="noopener"
+          class="inline-block rounded-sm border-2 border-fg px-4 py-2 font-mono text-xs font-semibold uppercase tracking-wider text-fg transition-colors hover:bg-fg hover:text-bg"
+        >
+          CV
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById('nav-toggle');
+  const menu = document.getElementById('nav-mobile-menu');
+
+  const setOpen = (open: boolean) => {
+    toggle?.setAttribute('aria-expanded', String(open));
+    toggle?.classList.toggle('is-open', open);
+    if (!menu) return;
+
+    if (open) {
+      menu.classList.add('is-open');
+      menu.style.height = `${menu.scrollHeight}px`;
+    } else {
+      menu.style.height = `${menu.scrollHeight}px`;
+      requestAnimationFrame(() => {
+        menu.classList.remove('is-open');
+        menu.style.height = '0px';
+      });
+    }
+  };
+
+  toggle?.addEventListener('click', () => {
+    setOpen(toggle.getAttribute('aria-expanded') !== 'true');
+  });
+
+  menu?.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => setOpen(false));
+  });
+</script>
+
+<style>
+  .burger {
+    display: flex;
+    width: 22px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .burger-line {
+    display: block;
+    height: 2px;
+    width: 100%;
+    border-radius: 1px;
+    background: currentColor;
+    transition: transform 0.3s ease, opacity 0.2s ease;
+  }
+
+  #nav-toggle.is-open .burger-line:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  #nav-toggle.is-open .burger-line:nth-child(2) {
+    opacity: 0;
+  }
+
+  #nav-toggle.is-open .burger-line:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .mobile-menu {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+  }
+
+  .mobile-menu.is-open {
+    border-top: 1px solid var(--color-border);
+  }
+</style>
