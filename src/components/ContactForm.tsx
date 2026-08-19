@@ -119,7 +119,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={isLoading}
-        className="w-full border border-fg bg-fg py-4 font-mono text-xs uppercase tracking-wider text-bg transition-colors hover:bg-transparent hover:text-fg disabled:cursor-not-allowed disabled:opacity-50"
+        className="w-full rounded-sm bg-accent py-4 font-mono text-xs font-semibold uppercase tracking-wider text-bg transition-colors hover:bg-fg disabled:cursor-not-allowed disabled:opacity-50"
       >
         {isLoading ? 'Envoi en cours…' : 'Envoyer le message'}
       </button>

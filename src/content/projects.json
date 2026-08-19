@@ -5,7 +5,7 @@
     "title": "SwanTrad",
     "category": "LegalTech — Mission freelance",
     "description": "Plateforme SaaS de traduction assermentée en ligne. Reprise d'une base de code héritée, remise à plat du back-office et livraison de nouvelles fonctionnalités post-lancement.",
-    "role": "Refonte du back-office, correction des anomalies héritées, intégration de la signature électronique qualifiée — en contact direct avec le client.",
+    "role": "Refonte du back-office, correction des anomalies héritées, intégration de la signature électronique qualifiée, en contact direct avec le client.",
     "tags": [
       "Laravel",
       "MySQL",
@@ -21,7 +21,7 @@
     "title": "Ma Banque",
     "category": "Application web fullstack",
     "description": "Application bancaire fullstack : API REST sécurisée, gestion des comptes, virements et historique des mouvements.",
-    "role": "Architecture en couches côté back (Spring Boot), structure modulaire core/features/shared côté front (Angular), authentification JWT et base de données Dockerisée.",
+    "role": "Architecture en couches côté back (Spring Boot), structure modulaire core/features/shared côté front (Angular), authentification JWT, tests unitaires et base de données Dockerisée.",
     "tags": [
       "Angular",
       "TypeScript",
@@ -88,7 +88,7 @@
     "title": "MDP Développeur",
     "category": "Site vitrine",
     "description": "Ce site : conçu et développé de la maquette à la mise en ligne, migré d'Angular vers Astro et redesigné en 2026.",
-    "role": "Architecture complète, optimisation SEO et performance, formulaire de contact — recodé en Astro et React.",
+    "role": "Architecture complète, optimisation SEO et performance, formulaire de contact.",
     "tags": [
       "Astro",
       "React",

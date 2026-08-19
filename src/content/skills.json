@@ -35,6 +35,14 @@
       {
         "icon": "assets/skills/storybook-color.svg",
         "name": "Storybook"
+      },
+      {
+        "icon": "assets/skills/html5-color.svg",
+        "name": "HTML"
+      },
+      {
+        "icon": "assets/skills/css3-color.svg",
+        "name": "CSS"
       }
     ]
   },
@@ -56,6 +64,14 @@
         "name": "Laravel"
       },
       {
+        "icon": "assets/skills/symfony.png",
+        "name": "Symfony"
+      },
+      {
+        "icon": "assets/skills/springboot-color.svg",
+        "name": "Spring Boot"
+      },
+      {
         "icon": "assets/skills/nodedotjs-color.svg",
         "name": "NodeJS"
       },
@@ -70,6 +86,10 @@
     "order": 3,
     "title": "Outils & Design",
     "skills": [
+      {
+        "icon": "assets/skills/jest-color.svg",
+        "name": "Jest"
+      },
       {
         "icon": "assets/skills/strapi-color.svg",
         "name": "Strapi"

@@ -6,7 +6,7 @@ const education = (await getCollection('education')).sort((a, b) => a.data.order
 ---
 
 <section id="experience" class="mx-auto max-w-6xl scroll-mt-20 border-t border-border px-6 py-20 md:px-10 md:py-28">
-  <h2 class="font-display text-3xl font-semibold text-fg md:text-4xl">Expérience</h2>
+  <h2 class="font-display text-3xl font-black text-fg md:text-4xl">Expérience</h2>
 
   <div class="mt-10">
     {experience.map(({ data }, i) => (
@@ -17,7 +17,7 @@ const education = (await getCollection('education')).sort((a, b) => a.data.order
         </div>
 
         <div class="md:col-span-9">
-          <h3 class="font-display text-xl font-semibold text-fg">{data.position}</h3>
+          <h3 class="font-display text-xl font-extrabold text-fg">{data.position}</h3>
           <p class="mt-1 font-mono text-xs uppercase tracking-wider text-accent">{data.company}</p>
 
           <ul class="mt-4 space-y-2">
@@ -31,7 +31,7 @@ const education = (await getCollection('education')).sort((a, b) => a.data.order
 
           <ul class="mt-5 flex flex-wrap gap-2">
             {data.technologies.map((tech) => (
-              <li class="border border-border px-3 py-1 font-mono text-[11px] uppercase tracking-wider text-secondary">
+              <li class="rounded-full bg-mist px-3 py-1 font-mono text-[11px] font-semibold uppercase tracking-wider text-secondary">
                 {tech}
               </li>
             ))}
@@ -41,12 +41,12 @@ const education = (await getCollection('education')).sort((a, b) => a.data.order
     ))}
   </div>
 
-  <h3 class="mt-16 font-display text-xl font-semibold text-fg">Formation</h3>
+  <h3 class="mt-16 font-display text-xl font-extrabold text-fg">Formation</h3>
   <div class="mt-6 grid grid-cols-1 gap-8 md:grid-cols-2">
     {education.map(({ data }) => (
       <div class="border-t border-border pt-6">
         <p class="font-mono text-xs uppercase tracking-wider text-muted">{data.year}</p>
-        <h4 class="mt-2 font-display text-lg font-semibold text-fg">{data.degree}</h4>
+        <h4 class="mt-2 font-display text-lg font-extrabold text-fg">{data.degree}</h4>
         <p class="mt-1 font-mono text-xs uppercase tracking-wider text-accent">{data.institution}</p>
         <p class="mt-3 text-sm leading-relaxed text-secondary">{data.detail}</p>
       </div>

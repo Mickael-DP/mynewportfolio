@@ -1,60 +1,70 @@
 ---
 import { Image } from 'astro:assets';
-import avatar from '../assets/profile/pp-portfolio.png';
+import avatar from '../assets/profile/pp-portfolio-2026.png';
 ---
 
-<section class="mx-auto max-w-6xl px-6 pb-20 pt-16 md:px-10 md:pb-28 md:pt-24">
-  <div class="grid grid-cols-1 gap-12 md:grid-cols-[1fr_auto] md:items-end">
-    <div>
-      <p class="font-mono text-sm uppercase tracking-wider text-accent">Développeur Fullstack</p>
-      <h1 class="mt-4 font-display text-5xl font-semibold leading-[0.95] tracking-tight text-fg sm:text-6xl md:text-7xl">
-        Mickaël<br />Dalle Pasqualine
-      </h1>
+<section class="relative overflow-hidden bg-accent text-bg">
+  <div class="pointer-events-none absolute -right-32 -top-40 h-[480px] w-[480px] rounded-full bg-highlight opacity-30 blur-[10px]" aria-hidden="true"></div>
 
-      <p class="mt-8 max-w-xl text-lg leading-relaxed text-secondary">
-        Depuis un Mastère Expert en Développement Fullstack chez SQUAD, j'ai enchaîné les missions
-        freelance — SwanTrad, SQUAD, Niceflow — en gardant la même exigence&nbsp;: cadrer, construire,
-        livrer. Aujourd'hui je cherche un <span class="font-medium text-fg">CDI</span> pour m'inscrire
-        dans la durée et contribuer à un projet technique solide.
-      </p>
+  <div class="relative mx-auto max-w-6xl px-6 pb-20 pt-16 md:px-10 md:pb-28 md:pt-24">
+    <div class="grid grid-cols-1 gap-12 md:grid-cols-[1fr_320px] md:items-stretch">
+      <div>
+        <p class="inline-block bg-highlight px-3 py-1.5 font-mono text-xs font-semibold uppercase tracking-wider text-fg rounded-sm">
+          Développeur Fullstack
+        </p>
+        <h1 class="mt-5 font-display text-5xl font-black leading-[0.95] tracking-tight text-bg sm:text-6xl md:text-7xl">
+          Mickaël<br />Dalle Pasqualine
+        </h1>
 
-      <div class="mt-10 flex flex-wrap items-center gap-4">
-        <a
-          href="#projets"
-          class="border border-fg bg-fg px-6 py-3 font-mono text-xs uppercase tracking-wider text-bg transition-colors hover:bg-transparent hover:text-fg"
-        >
-          Voir mes projets
-        </a>
-        <a
-          href="#contact"
-          class="border border-fg px-6 py-3 font-mono text-xs uppercase tracking-wider text-fg transition-colors hover:bg-fg hover:text-bg"
-        >
-          Me contacter
-        </a>
+        <p class="mt-8 max-w-xl text-lg leading-relaxed text-bg/85">
+          Diplômé d'un Mastère Expert en Développement Fullstack, j'ai fait mes armes en alternance
+          chez Niceflow puis SQUAD, avant d'enchaîner les missions freelance chez SQUAD et SwanTrad.
+          Je cherche aujourd'hui un
+          <span class="bg-highlight px-1.5 py-0.5 font-semibold text-fg rounded-sm">CDI</span>
+          pour rejoindre une équipe et m'y poser sur la durée.
+        </p>
+
+        <div class="mt-10 flex flex-wrap items-center gap-4">
+          <a
+            href="#projets"
+            class="rounded-sm bg-bg px-6 py-3 font-mono text-xs font-semibold uppercase tracking-wider text-accent transition-colors hover:bg-fg hover:text-bg"
+          >
+            Voir mes projets
+          </a>
+          <a
+            href="#contact"
+            class="rounded-sm border-2 border-bg px-6 py-3 font-mono text-xs font-semibold uppercase tracking-wider text-bg transition-colors hover:bg-bg hover:text-accent"
+          >
+            Me contacter
+          </a>
+        </div>
+
+        <dl class="mt-10 flex flex-wrap gap-x-8 gap-y-2 font-mono text-xs uppercase tracking-wider text-bg/60">
+          <div class="flex gap-2">
+            <dt>Basé à</dt>
+            <dd class="text-bg/85">Pégomas, France</dd>
+          </div>
+          <div class="flex gap-2">
+            <dt>Email</dt>
+            <dd>
+              <a href="mailto:m.dallepasqualine@gmail.com" class="text-bg/85 transition-colors hover:text-highlight">
+                m.dallepasqualine@gmail.com
+              </a>
+            </dd>
+          </div>
+        </dl>
       </div>
 
-      <dl class="mt-10 flex flex-wrap gap-x-8 gap-y-2 font-mono text-xs uppercase tracking-wider text-muted">
-        <div class="flex gap-2">
-          <dt>Basé à</dt>
-          <dd class="text-secondary">Pégomas, France</dd>
-        </div>
-        <div class="flex gap-2">
-          <dt>Email</dt>
-          <dd>
-            <a href="mailto:m.dallepasqualine@gmail.com" class="text-secondary transition-colors hover:text-accent">
-              m.dallepasqualine@gmail.com
-            </a>
-          </dd>
-        </div>
-      </dl>
+      <div class="relative mx-auto aspect-[3/4] w-full max-w-xs md:mx-0 md:aspect-auto md:h-full md:max-w-none">
+        <div class="absolute -bottom-4 -right-4 h-full w-full bg-highlight rounded-sm" aria-hidden="true"></div>
+        <Image
+          src={avatar}
+          alt="Portrait de Mickaël Dalle Pasqualine"
+          width={480}
+          height={640}
+          class="relative h-full w-full border-2 border-bg object-cover object-top"
+        />
+      </div>
     </div>
-
-    <Image
-      src={avatar}
-      alt="Portrait de Mickaël Dalle Pasqualine"
-      width={200}
-      height={200}
-      class="h-40 w-40 border border-border object-cover grayscale md:h-48 md:w-48"
-    />
   </div>
 </section>
