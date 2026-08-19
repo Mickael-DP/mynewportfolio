@@ -5,11 +5,16 @@
 /tmp
 /out-tsc
 /bazel-out
+.astro/
 
 # Node
 /node_modules
 npm-debug.log
 yarn-error.log
+
+# Environment variables
+.env
+.env.production
 
 # IDEs and editors
 .idea/
@@ -40,3 +45,4 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+.vercel

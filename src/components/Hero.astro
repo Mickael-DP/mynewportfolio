@@ -1,0 +1,60 @@
+---
+import { Image } from 'astro:assets';
+import avatar from '../assets/profile/pp-portfolio.png';
+---
+
+<section class="mx-auto max-w-6xl px-6 pb-20 pt-16 md:px-10 md:pb-28 md:pt-24">
+  <div class="grid grid-cols-1 gap-12 md:grid-cols-[1fr_auto] md:items-end">
+    <div>
+      <p class="font-mono text-sm uppercase tracking-wider text-accent">Développeur Fullstack</p>
+      <h1 class="mt-4 font-display text-5xl font-semibold leading-[0.95] tracking-tight text-fg sm:text-6xl md:text-7xl">
+        Mickaël<br />Dalle Pasqualine
+      </h1>
+
+      <p class="mt-8 max-w-xl text-lg leading-relaxed text-secondary">
+        Depuis un Mastère Expert en Développement Fullstack chez SQUAD, j'ai enchaîné les missions
+        freelance — SwanTrad, SQUAD, Niceflow — en gardant la même exigence&nbsp;: cadrer, construire,
+        livrer. Aujourd'hui je cherche un <span class="font-medium text-fg">CDI</span> pour m'inscrire
+        dans la durée et contribuer à un projet technique solide.
+      </p>
+
+      <div class="mt-10 flex flex-wrap items-center gap-4">
+        <a
+          href="#projets"
+          class="border border-fg bg-fg px-6 py-3 font-mono text-xs uppercase tracking-wider text-bg transition-colors hover:bg-transparent hover:text-fg"
+        >
+          Voir mes projets
+        </a>
+        <a
+          href="#contact"
+          class="border border-fg px-6 py-3 font-mono text-xs uppercase tracking-wider text-fg transition-colors hover:bg-fg hover:text-bg"
+        >
+          Me contacter
+        </a>
+      </div>
+
+      <dl class="mt-10 flex flex-wrap gap-x-8 gap-y-2 font-mono text-xs uppercase tracking-wider text-muted">
+        <div class="flex gap-2">
+          <dt>Basé à</dt>
+          <dd class="text-secondary">Pégomas, France</dd>
+        </div>
+        <div class="flex gap-2">
+          <dt>Email</dt>
+          <dd>
+            <a href="mailto:m.dallepasqualine@gmail.com" class="text-secondary transition-colors hover:text-accent">
+              m.dallepasqualine@gmail.com
+            </a>
+          </dd>
+        </div>
+      </dl>
+    </div>
+
+    <Image
+      src={avatar}
+      alt="Portrait de Mickaël Dalle Pasqualine"
+      width={200}
+      height={200}
+      class="h-40 w-40 border border-border object-cover grayscale md:h-48 md:w-48"
+    />
+  </div>
+</section>

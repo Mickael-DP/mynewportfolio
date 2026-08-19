@@ -1,0 +1,19 @@
+---
+import { getCollection } from 'astro:content';
+import ProjectCard from './ProjectCard.astro';
+
+const projects = (await getCollection('projects')).sort((a, b) => a.data.order - b.data.order);
+---
+
+<section id="projets" class="mx-auto max-w-6xl scroll-mt-20 px-6 py-20 md:px-10 md:py-28">
+  <div class="flex items-baseline justify-between gap-4">
+    <h2 class="font-display text-3xl font-semibold text-fg md:text-4xl">Projets</h2>
+    <span class="font-mono text-xs uppercase tracking-wider text-muted">{projects.length} sélectionnés</span>
+  </div>
+
+  <div class="mt-4">
+    {projects.map((project, i) => (
+      <ProjectCard index={i + 1} {...project.data} />
+    ))}
+  </div>
+</section>
