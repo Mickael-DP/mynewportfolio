@@ -1,9 +1,9 @@
-import swantrad from './swantrad.png';
+import swantrad from './site-swantrad.png';
 import gestionnaire from './gestionnaire.png';
 import algofit from './app-mobile-coach-ia.png';
 import bodyfit from './BodyFiitAPP.png';
-import aragonite from './aragonite.png';
-import mdallepasqualine from './mdallepasqualine.png';
+import aragonite from './site-aragonite.png';
+import mdallepasqualine from './site-freelance.png';
 
 export const projectImages: Record<string, ImageMetadata> = {
   'swantrad.png': swantrad,
